@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topic_of_the_weeks",
+  "info": {
+    "singularName": "topic-of-the-week",
+    "pluralName": "topic-of-the-weeks",
+    "displayName": "Topic-of-the-week",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "topic": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "topic_desc": {
+      "type": "richtext",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "podcasts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::podcast.podcast"
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video.video"
+    },
+    "KW": {
+      "type": "integer",
+      "required": true
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "searchTerm": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

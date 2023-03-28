@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_events_keyvisuals",
+  "info": {
+    "icon": "tv",
+    "description": "",
+    "displayName": "keyvisual"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "allowedTypes": [
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

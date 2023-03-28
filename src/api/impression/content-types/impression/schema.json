@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "impressions",
+  "info": {
+    "singularName": "impression",
+    "pluralName": "impressions",
+    "displayName": "Impression",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "populateCreatorFields": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "item_type": {
+      "type": "enumeration",
+      "enum": [
+        "article",
+        "podcast",
+        "video"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "item_id": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "count": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "period": {
+      "type": "enumeration",
+      "enum": [
+        "day",
+        "week",
+        "month",
+        "test"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

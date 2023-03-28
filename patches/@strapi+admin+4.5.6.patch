@@ -1,0 +1,383 @@
+diff --git a/node_modules/@strapi/admin/admin/src/content-manager/components/FieldComponent/index.js b/node_modules/@strapi/admin/admin/src/content-manager/components/FieldComponent/index.js
+index 7602784..7d06f72 100644
+--- a/node_modules/@strapi/admin/admin/src/content-manager/components/FieldComponent/index.js
++++ b/node_modules/@strapi/admin/admin/src/content-manager/components/FieldComponent/index.js
+@@ -2,6 +2,7 @@
+ import React, { memo, useMemo } from 'react';
+ import PropTypes from 'prop-types';
+ import size from 'lodash/size';
++import isEmpty from 'lodash/isEmpty'
+ import isEqual from 'react-fast-compare';
+ import { useIntl } from 'react-intl';
+ import { NotAllowedInput } from '@strapi/helper-plugin';
+@@ -43,7 +44,7 @@ const FieldComponent = ({
+ }) => {
+   const { formatMessage } = useIntl();
+   const componentValueLength = size(componentValue);
+-  const isInitialized = componentValue !== null || isFromDynamicZone;
++  const isInitialized = ( componentValue !== null && ( !isEmpty(componentValue) || !required ) ) || isFromDynamicZone;
+   const showResetComponent =
+     !isRepeatable && isInitialized && !isFromDynamicZone && hasChildrenAllowedFields;
+ 
+diff --git a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/GridRow/index.js b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/GridRow/index.js
+index 7519951..082c424 100644
+--- a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/GridRow/index.js
++++ b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/GridRow/index.js
+@@ -3,48 +3,13 @@ import PropTypes from 'prop-types';
+ import { Grid, GridItem } from '@strapi/design-system/Grid';
+ import Inputs from '../../../components/Inputs';
+ import FieldComponent from '../../../components/FieldComponent';
++import SingleRow from '../components/SingleRow'
+ 
+ const GridRow = ({ columns, customFieldInputs }) => {
+   return (
+     <Grid gap={4}>
+       {columns.map(({ fieldSchema, labelAction, metadatas, name, size, queryInfos }) => {
+-        const isComponent = fieldSchema.type === 'component';
+-
+-        if (isComponent) {
+-          const { component, max, min, repeatable = false, required = false } = fieldSchema;
+-
+-          return (
+-            <GridItem col={size} s={12} xs={12} key={component}>
+-              <FieldComponent
+-                componentUid={component}
+-                labelAction={labelAction}
+-                isRepeatable={repeatable}
+-                intlLabel={{
+-                  id: metadatas.label,
+-                  defaultMessage: metadatas.label,
+-                }}
+-                max={max}
+-                min={min}
+-                name={name}
+-                required={required}
+-              />
+-            </GridItem>
+-          );
+-        }
+-
+-        return (
+-          <GridItem col={size} key={name} s={12} xs={12}>
+-            <Inputs
+-              size={size}
+-              fieldSchema={fieldSchema}
+-              keys={name}
+-              labelAction={labelAction}
+-              metadatas={metadatas}
+-              queryInfos={queryInfos}
+-              customFieldInputs={customFieldInputs}
+-            />
+-          </GridItem>
+-        );
++        return <SingleRow fieldSchema={fieldSchema} labelAction={labelAction} metadatas={metadatas} name={name} size={size} queryInfos={queryInfos} customFieldInputs={customFieldInputs} />
+       })}
+     </Grid>
+   );
+diff --git a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/components/SingleRow.js b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/components/SingleRow.js
+new file mode 100644
+index 0000000..4055a4e
+--- /dev/null
++++ b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/components/SingleRow.js
+@@ -0,0 +1,53 @@
++import React from 'react';
++import FieldComponent from '../../../components/FieldComponent';
++import Inputs from '../../../components/Inputs';
++import { GridItem } from '@strapi/design-system/Grid';
++
++const SingleRow = ({
++    fieldSchema, labelAction, metadatas, name, size, queryInfos, customFieldInputs
++}) => {
++    const isComponent = fieldSchema.type === 'component';
++
++    if (isComponent) {
++      const {
++        component,
++        max,
++        min,
++        repeatable = false,
++        required = false,
++      } = fieldSchema;
++
++      return (
++        <GridItem col={size} s={12} xs={12} key={component}>
++          <FieldComponent
++            componentUid={component}
++            labelAction={labelAction}
++            isRepeatable={repeatable}
++            intlLabel={{
++              id: metadatas.label,
++              defaultMessage: metadatas.label,
++            }}
++            max={max}
++            min={min}
++            name={name}
++            required={required}
++          />
++        </GridItem>
++      );
++    }
++
++    return (
++      <GridItem col={size} key={name} s={12} xs={12}>
++        <Inputs
++          fieldSchema={fieldSchema}
++          keys={name}
++          labelAction={labelAction}
++          metadatas={metadatas}
++          queryInfos={queryInfos}
++          customFieldInputs={customFieldInputs}
++        />
++      </GridItem>
++    );
++};
++
++export default SingleRow;
+\ No newline at end of file
+diff --git a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js
+index a692cf0..03523aa 100644
+--- a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js
++++ b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js
+@@ -1,4 +1,4 @@
+-import React, { memo } from 'react';
++import React, { memo, useState } from 'react';
+ import PropTypes from 'prop-types';
+ import { useSelector } from 'react-redux';
+ import {
+@@ -15,9 +15,13 @@ import { Main } from '@strapi/design-system/Main';
+ import { Stack } from '@strapi/design-system/Stack';
+ import Layer from '@strapi/icons/Layer';
+ import Pencil from '@strapi/icons/Pencil';
++import { Typography } from '@strapi/design-system/Typography';
+ import { InjectionZone } from '../../../shared/components';
+ import permissions from '../../../permissions';
+ import DynamicZone from '../../components/DynamicZone';
++import SingleRow from "./components/SingleRow";
++import { Tabs, Tab, TabGroup, TabPanels, TabPanel } from "@strapi/design-system/Tabs";
++import { Accordion, AccordionToggle, AccordionContent, AccordionGroup } from "@strapi/design-system/Accordion";
+ 
+ import CollectionTypeFormWrapper from '../../components/CollectionTypeFormWrapper';
+ import EditViewDataManagerProvider from '../../components/EditViewDataManagerProvider';
+@@ -40,12 +44,20 @@ const EditView = ({ allowedActions, isSingleType, goBack, slug, id, origin, user
+   const { trackUsage } = useTracking();
+   const { formatMessage } = useIntl();
+ 
++  const [expandedID, setExpandedID] = useState(null);
++
++  const handleToggle = (id) => () => {
++    setExpandedID((s) => (s === id ? null : id));
++  };
++
+   const { layout, formattedContentTypeLayout, customFieldUids } = useSelector((state) => ({
+     layout: selectCurrentLayout(state),
+     formattedContentTypeLayout: selectAttributesLayout(state),
+     customFieldUids: selectCustomFieldUids(state),
+   }));
+ 
++  const layoutFlat = layout.contentType.layouts.edit.flat(1);
++
+   const { isLazyLoading, lazyComponentStore } = useLazyComponents(customFieldUids);
+ 
+   const { createActionAllowedFields, readActionAllowedFields, updateActionAllowedFields } =
+@@ -56,9 +68,8 @@ const EditView = ({ allowedActions, isSingleType, goBack, slug, id, origin, user
+     : cmPermissions.collectionTypesConfigurations;
+ 
+   // // FIXME when changing the routing
+-  const configurationsURL = `/content-manager/${
+-    isSingleType ? 'singleType' : 'collectionType'
+-  }/${slug}/configurations/edit`;
++  const configurationsURL = `/content-manager/${isSingleType ? 'singleType' : 'collectionType'
++    }/${slug}/configurations/edit`;
+ 
+   const DataManagementWrapper = isSingleType ? SingleTypeFormWrapper : CollectionTypeFormWrapper;
+ 
+@@ -69,6 +80,20 @@ const EditView = ({ allowedActions, isSingleType, goBack, slug, id, origin, user
+     });
+   };
+ 
++  // Check if a block is Tabs
++  const isTabs = (block) => {
++    return block.every((subBlock) => {
++      return subBlock.every((obj) => obj.fieldSchema.customField === "plugin::digitalx-custom-fields.tabs");
++    });
++  };
++
++  // Check if a block is Accordions
++  const isAccordions = (block) => {
++    return block.every((subBlock) => {
++      return subBlock.every((obj) => obj.fieldSchema.customField === "plugin::digitalx-custom-fields.accordions");
++    });
++  };
++
+   if (isLazyLoading) {
+     return <LoadingIndicatorPage />;
+   }
+@@ -144,6 +169,108 @@ const EditView = ({ allowedActions, isSingleType, goBack, slug, id, origin, user
+                           );
+                         }
+ 
++                        if (isTabs(row)) {
++                          const {
++                            0: {
++                              0: { name, fieldSchema, metadatas, labelAction },
++                            },
++                          } = row;
++                          return (
++                            <>
++                              <div style={{ marginBottom: -20 }}>
++                                <Typography variant="pi" fontWeight="bold">
++                                  {metadatas.label}
++                                </Typography>
++                              </div>
++                              <Box shadow="tableShadow" borderColor="neutral150">
++                                <TabGroup label={metadatas.label} id="tabs">
++                                  <Tabs>
++                                    {Object.entries(fieldSchema.options).map((optionArr, optionIndex) => {
++                                      if (optionArr[0].startsWith("tab")) {
++                                        const tabId = optionArr[0].slice(3);
++                                        const tabTitle = fieldSchema.options[`titleTab${tabId}`] ? fieldSchema.options[`titleTab${tabId}`] : `Tab #${tabId}`;
++                                        return <Tab>{tabTitle}</Tab>;
++                                      }
++                                    })}
++                                  </Tabs>
++                                  <TabPanels>
++                                    {Object.entries(fieldSchema.options).map((optionArr, optionIndex) => {
++                                      if (optionArr[0].startsWith("tab")) {
++                                        return (
++                                          <TabPanel key={optionIndex}>
++                                            <Box color="neutral800" padding={4} background="neutral0">
++                                              <Stack spacing={6}>
++                                                <Grid gap={4}>
++                                                  {optionArr[1].map((elemKey) => {
++                                                    const elem = layoutFlat.filter((item) => item.name === elemKey);
++                                                    const { fieldSchema, labelAction, metadatas, name, size, queryInfos } = elem[0];
++                                                    if (fieldSchema.type === "dynamiczone") {
++                                                      return (
++                                                        <GridItem col={12} s={12} xs={12} key={elemKey}>
++                                                          <DynamicZone name={name} fieldSchema={fieldSchema} labelAction={labelAction} metadatas={metadatas} />
++                                                        </GridItem>
++                                                      );
++                                                    }
++                                                    return <SingleRow fieldSchema={fieldSchema} labelAction={labelAction} metadatas={metadatas} name={name} size={size} queryInfos={queryInfos} />;
++                                                  })}
++                                                </Grid>
++                                              </Stack>
++                                            </Box>
++                                          </TabPanel>
++                                        );
++                                      }
++                                    })}
++                                  </TabPanels>
++                                </TabGroup>
++                              </Box>
++                            </>
++                          );
++                        }
++
++                        if (isAccordions(row)) {
++                          const {
++                            0: {
++                              0: { name, fieldSchema, metadatas, labelAction },
++                            },
++                          } = row;
++                          return (
++                            <AccordionGroup label={metadatas.label}>
++                              {Object.entries(fieldSchema.options).map((optionArr, optionIndex) => {
++                                const accId = optionArr[0].slice(9);
++                                const accTitle = fieldSchema.options[`titleAccordion${accId}`] ? fieldSchema.options[`titleAccordion${accId}`] : `Accordion #${accId}`;
++                                const identifire = metadatas.label+accId
++                                if (optionArr[0].startsWith("accordion")) {
++                                  return (
++                                    <Accordion key={optionIndex} expanded={expandedID === identifire} onToggle={handleToggle(identifire)} id={identifire} size="S">
++                                      <AccordionToggle title={accTitle} togglePosition="left" />
++                                      <AccordionContent>
++                                        <Box color="neutral800" padding={4} background="neutral0">
++                                          <Stack spacing={6}>
++                                            <Grid gap={4}>
++                                              {optionArr[1].map((elemKey) => {
++                                                const elem = layoutFlat.filter((item) => item.name === elemKey);
++                                                const { fieldSchema, labelAction, metadatas, name, size, queryInfos } = elem[0];
++                                                if (fieldSchema.type === "dynamiczone") {
++                                                  return (
++                                                    <GridItem col={12} s={12} xs={12} key={elemKey}>
++                                                      <DynamicZone name={name} fieldSchema={fieldSchema} labelAction={labelAction} metadatas={metadatas} />
++                                                    </GridItem>
++                                                  );
++                                                }
++                                                return <SingleRow fieldSchema={fieldSchema} labelAction={labelAction} metadatas={metadatas} name={name} size={size} queryInfos={queryInfos} />;
++                                              })}
++                                            </Grid>
++                                          </Stack>
++                                        </Box>
++                                      </AccordionContent>
++                                    </Accordion>
++                                  );
++                                }
++                              })}
++                            </AccordionGroup>
++                          );
++                        }
++
+                         return (
+                           <Box
+                             key={index}
+diff --git a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/utils/createAttributesLayout.js b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/utils/createAttributesLayout.js
+index b46faaf..82ca404 100644
+--- a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/utils/createAttributesLayout.js
++++ b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/utils/createAttributesLayout.js
+@@ -8,19 +8,53 @@ const createAttributesLayout = (currentContentTypeLayoutData) => {
+   const currentLayout = currentContentTypeLayoutData.layouts.edit;
+   const attributes = currentContentTypeLayoutData.attributes;
+ 
++  let filteredCurrentLayout = currentLayout
++
++  const attsInTabsOrAccs = []
++
++  const tabsRows = Object.entries(attributes).filter(item => item[1].customField === 'plugin::digitalx-custom-fields.tabs')
++  if ( tabsRows.length > 0 ) {
++    for ( let tabRow of tabsRows ) {
++      let options = tabRow[1].options
++      for ( let optionKey in options ) {
++        if ( optionKey.startsWith('tab') ) {
++          attsInTabsOrAccs.push(...options[optionKey])
++        }
++      }
++    }
++  }
++
++  const accsRows = Object.entries(attributes).filter(item => item[1].customField === 'plugin::digitalx-custom-fields.accordions')
++  if ( accsRows.length > 0 ) {
++    for ( let accRow of accsRows ) {
++      let options = accRow[1].options
++      for ( let optionKey in options ) {
++        if ( optionKey.startsWith('accordion') ) {
++          attsInTabsOrAccs.push(...options[optionKey])
++        }
++      }
++    }
++  }
++  
++  filteredCurrentLayout = filteredCurrentLayout.map(arr => arr.filter(item => !attsInTabsOrAccs.includes(item.name))).filter(arr => arr.length > 0)
++
++
+   const getType = (name) => get(attributes, [name, 'type'], '');
++  const getCustomType = (name) => get(attributes, [name, 'customField'], '');
+ 
+   let currentRowIndex = 0;
+   const newLayout = [];
+ 
+-  currentLayout.forEach((row) => {
++  filteredCurrentLayout.forEach((row) => {
+     const hasDynamicZone = row.some(({ name }) => getType(name) === 'dynamiczone');
++    const hasTabs = row.some(({ name }) => getCustomType(name) === 'plugin::digitalx-custom-fields.tabs');
++    const hasAccordions = row.some(({ name }) => getCustomType(name) === 'plugin::digitalx-custom-fields.accordions');
+ 
+     if (!newLayout[currentRowIndex]) {
+       newLayout[currentRowIndex] = [];
+     }
+ 
+-    if (hasDynamicZone) {
++    if (hasDynamicZone || hasTabs || hasAccordions) {
+       currentRowIndex = currentRowIndex === 0 && isEmpty(newLayout[0]) ? 0 : currentRowIndex + 1;
+ 
+       if (!newLayout[currentRowIndex]) {

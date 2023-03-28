@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_award_content_award_intros",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardIntro"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "subheadline": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "button": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "side"
+      ]
+    },
+    "watermark": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image_title": {
+      "type": "string"
+    },
+    "image_subtitle": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_gallery_sliders",
+  "info": {
+    "icon": "arrows-alt-h",
+    "description": "",
+    "displayName": "slider"
+  },
+  "options": {},
+  "attributes": {
+    "slide": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

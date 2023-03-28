@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_events_event_parallaxes",
+  "info": {
+    "icon": "chalkboard",
+    "displayName": "event_parallax"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "btn_label": {
+      "type": "string"
+    },
+    "btn_url": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

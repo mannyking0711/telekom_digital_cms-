@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_event_pk_event_pk_intro",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "event-pk-intro"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "text2": {
+      "type": "richtext"
+    },
+    "button": {
+      "type": "string"
+    },
+    "countdown_show": {
+      "type": "boolean",
+      "default": true
+    },
+    "countdown_day": {
+      "type": "string",
+      "required": false
+    },
+    "countdown_days": {
+      "type": "string",
+      "required": false
+    },
+    "countdown_title": {
+      "type": "string"
+    },
+    "countdown_text": {
+      "type": "string"
+    },
+    "countdown_button": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_content_title_text_items",
+  "info": {
+    "icon": "text-width",
+    "description": "Inhaltselement Titel und Text",
+    "displayName": "TitleText"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

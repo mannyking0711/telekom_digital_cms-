@@ -1,0 +1,26 @@
+#!/bin/bash
+
+cd /var/www/digitalx_cms
+
+# stop existing apache
+sudo systemctl stop httpd.service
+
+# reset node_modules
+rm -rf node_modules
+npm install
+npm install -g strapi
+
+# install pm2 runtime
+npm install -g pm2@^4.5.6
+
+# update permissions
+chown -R ec2-user:ec2-user /var/www/html
+chown -R ec2-user:ec2-user /var/www/digitalx_cms
+
+# start server
+cd /var/www/digitalx_cms
+sudo pm2 start --name telekom-digitalx-cms ecosystem.config.js
+# use "pm2 logs --format" on shell to debug
+
+# validate service
+# curl 'http://localhost/index' > /dev/null

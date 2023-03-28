@@ -1,0 +1,589 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "archive"
+      ],
+      "default": "draft",
+      "private": true,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "introtext": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug_de": {
+      "type": "string",
+      "required": true
+    },
+    "slug_en": {
+      "type": "string",
+      "required": true
+    },
+    "start": {
+      "type": "datetime"
+    },
+    "end": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logo_dark": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_list": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_list_mobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link_register": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "count_speaker": {
+      "type": "string"
+    },
+    "count_speaker_label": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "count_countries": {
+      "type": "string"
+    },
+    "count_countries_label": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "count_stages": {
+      "type": "string"
+    },
+    "count_stages_label": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "count_hours": {
+      "type": "string"
+    },
+    "count_hours_label": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "registrationtext": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "agendatext": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "speakers": {
+      "type": "dynamiczone",
+      "components": [
+        "event.event-speaker"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "streams": {
+      "type": "dynamiczone",
+      "components": [
+        "event.event-streams"
+      ]
+    },
+    "coverages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::coverage.coverage",
+      "mappedBy": "event"
+    },
+    "agenda": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event-agenda.event-agenda",
+      "mappedBy": "event"
+    },
+    "partners_regular": {
+      "required": true,
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_premium": {
+      "required": true,
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_coop": {
+      "required": true,
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_support": {
+      "required": true,
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_mobility": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_digitalization": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_media": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_startup": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "partners_partner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-list",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "map_locations": {
+      "required": true,
+      "type": "component",
+      "repeatable": false,
+      "component": "map-location.map-location-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "show_counter": {
+      "type": "boolean",
+      "default": true
+    },
+    "content_teaser_cards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.teaser-cards"
+    },
+    "faq_title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "faq_text": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "faq_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.title-text"
+    },
+    "event_intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-intro"
+    },
+    "event_map": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-map"
+    },
+    "partner_focus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-focus",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "event_header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-header"
+    },
+    "keyvisual": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.keyvisual"
+    },
+    "event_mainstages": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-mainstages"
+    },
+    "event_introduction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-introduction"
+    },
+    "event_presenter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-presenter"
+    },
+    "event_advertising": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-advertising"
+    },
+    "event_parallax": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-parallax"
+    },
+    "event_slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event.event-slides"
+    },
+    "event_marketplaces": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-marketplaces"
+    },
+    "event_locations": {
+      "type": "component",
+      "repeatable": false,
+      "component": "event.event-locations"
+    },
+    "event_app": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-app"
+    },
+    "event_stream": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-stream"
+    },
+    "event_gk_pk_teaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-gk-pk-teaser"
+    },
+    "event_top_speaker": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-top-speaker"
+    },
+    "event_agenda_highlights": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-agenda-highlights"
+    },
+    "event_megatrends": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-megatrends"
+    },
+    "event_megatrends2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-megatrends2"
+    },
+    "event_teaser_tickets": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-teaser-tickets"
+    },
+    "event_banner2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "events.event-banner2"
+    },
+    "content_note": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.note"
+    },
+    "content_slider_quotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.slider-quotes"
+    },
+    "speakers_page_meta_title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "speakers_page_meta_description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "speakers_page_title_a": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "speakers_page_title_b": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "speakers_page_text": {
+      "type": "text",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "newsletters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::newsletter.newsletter",
+      "mappedBy": "event"
+    },
+    "countdown_day": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "countdown_days": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "countdown_title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "countdown_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "countdown_button": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "tickets_title": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "tickets_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "tickets_button": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

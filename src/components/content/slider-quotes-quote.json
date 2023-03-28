@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_content_slider_quotes_quote",
+  "info": {
+    "icon": "address-book",
+    "description": "",
+    "displayName": "Quote"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    }
+  }
+}

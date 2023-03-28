@@ -1,0 +1,25 @@
+version: 0.0
+os: linux
+
+
+files:
+  - source: /
+    destination: /var/www/digitalx_cms/
+
+
+hooks:
+
+  ApplicationStop:
+    - location: aws/scripts/stop_app
+      timeout: 300
+      runas: root
+
+  Install:
+    - location: aws/scripts/install_dependencies
+      timeout: 300
+      runas: root
+
+  AfterInstall:
+    - location: aws/scripts/start_app
+      timeout: 300
+      runas: root

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_article_article_text_images",
+  "info": {
+    "icon": "text-height",
+    "displayName": "ArticleTextImage"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "alt_text": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "image_alignment": {
+      "type": "enumeration",
+      "enum": [
+        "Left",
+        "Right"
+      ],
+      "default": "Right",
+      "required": true
+    }
+  }
+}

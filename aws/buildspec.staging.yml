@@ -1,0 +1,68 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      # create .env files
+      - cp .env.example .env
+
+      # add app vars to .env
+      - sed -i "/^HOST/ s/=.*/=\"$HOST\"/" .env
+      - sed -i "/^PORT/ s/=.*/=\"$PORT\"/" .env
+      - sed -i "/^APP_KEYS/ s/=.*/=\"APP_KEYS\"/" .env
+      - sed -i "/^API_TOKEN_SALT/ s/=.*/=\"API_TOKEN_SALT\"/" .env
+      - sed -i "/^ADMIN_JWT_SECRET/ s/=.*/=\"ADMIN_JWT_SECRET\"/" .env
+      - sed -i "/^JWT_SECRET/ s/=.*/=\"JWT_SECRET\"/" .env
+
+      # add database credentials to .env
+      - sed -i "/^RDS_HOSTNAME/ s/=.*/=\"$RDS_HOSTNAME\"/" .env
+      - sed -i "/^RDS_DB_NAME/ s/=.*/=\"$RDS_DB_NAME\"/" .env
+      - sed -i "/^RDS_USERNAME/ s/=.*/=\"$(echo $AWS_SECRETS | jq -r '.cms_rds_user')\"/" .env
+      - sed -i "/^RDS_PASSWORD/ s/=.*/=\"$(echo $AWS_SECRETS | jq -r '.cms_rds_password')\"/" .env
+
+      # add matomo credentials to .env
+      - matomoUrl="$(sed -E 's/\//\\\//g' <<<$MATOMO_URL)"
+      - echo $matomoUrl
+      - sed -i "/^MATOMO_URL/ s/=.*/=\"$matomoUrl\"/" .env
+      - sed -i "/^MATOMO_TOKEN/ s/=.*/=\"$MATOMO_TOKEN\"/" .env
+
+      # add s3 bucket to .env
+      - sed -i "/^AWS_ACCESS_KEY_ID/ s/=.*/=\"$AWS_ACCESS_KEY_ID\"/" .env
+      - sed -i "/^AWS_ACCESS_SECRET/ s/=.*/=\"$AWS_ACCESS_SECRET\"/" .env
+      - sed -i "/^AWS_S3_BUCKET/ s/=.*/=\"$AWS_S3_BUCKET\"/" .env
+
+      # add frontend vars to .env
+      - frontendUrl="$(sed -E 's/\//\\\//g' <<<$FRONTEND_URL)"
+      - sed -i "/^FRONTEND_URL/ s/=.*/=\"$frontendUrl\"/" .env
+      - sed -i "/^FRONTEND_PREVIEW_SECRET/ s/=.*/=\"$FRONTEND_PREVIEW_SECRET\"/" .env
+
+      # add database to pm2 ecosystem
+      - "sed -i \"/^\\s*RDS_HOSTNAME/ s/\\:.*/\\: \\'$RDS_HOSTNAME\\',/\" ecosystem.config.js"
+      - "sed -i \"/^\\s*RDS_DB_NAME/ s/\\:.*/\\: \\'$RDS_DB_NAME\\',/\" ecosystem.config.js"
+      - "sed -i \"/^\\s*RDS_USERNAME/ s/\\:.*/\\: \\'$(echo $AWS_SECRETS | jq -r '.cms_rds_user')\\',/\" ecosystem.config.js"
+      - "sed -i \"/^\\s*RDS_PASSWORD/ s/\\:.*/\\: \\'$(echo $AWS_SECRETS | jq -r '.cms_rds_password')\\',/\" ecosystem.config.js"
+
+      # update host for CORS middleware
+      - appUrl="$(sed -E 's/\//\\\//g' <<<$APP_URL)"
+      - echo $appUrl
+      - "sed -i \"s/http\\:\\/\\/localhost\\:1337/$appUrl/\" config/production/middlewares.js"
+
+
+  build:
+    commands:
+      # compile strapi app
+      - npm ci
+      - NODE_ENV=production npm run build
+
+
+  post_build:
+    commands:
+      # remove unnecessary assets
+      - rm -rf node_modules
+      - rm -rf _assets
+      - rm -rf sql
+
+
+artifacts:
+  files:
+    - '**/*'

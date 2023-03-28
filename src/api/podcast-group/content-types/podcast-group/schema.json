@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podcast_groups",
+  "info": {
+    "singularName": "podcast-group",
+    "pluralName": "podcast-groups",
+    "displayName": "Podcast-group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "archive"
+      ],
+      "default": "draft",
+      "private": true,
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "published": {
+      "type": "date",
+      "required": false
+    },
+    "img_list": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_detail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug_de": {
+      "type": "string"
+    },
+    "slug_en": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false
+    },
+    "meta_title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "meta_description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "structured_data": {
+      "type": "json"
+    },
+    "img_social": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "podcasts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::podcast.podcast",
+      "mappedBy": "podcast_group"
+    },
+    "subline": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "videos_in_fokuses",
+  "info": {
+    "singularName": "videos-in-fokus",
+    "pluralName": "videos-in-fokuses",
+    "displayName": "Videos-in-fokus",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video.video"
+    },
+    "highlight": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video.video"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "button": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

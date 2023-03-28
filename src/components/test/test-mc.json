@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_test_test_mcs",
+  "info": {
+    "displayName": "testMC",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "nestedRepeatedComponent": {
+      "displayName": "nestedRepeatedComponent",
+      "type": "component",
+      "repeatable": true,
+      "component": "test.nested-repeated-component"
+    }
+  }
+}

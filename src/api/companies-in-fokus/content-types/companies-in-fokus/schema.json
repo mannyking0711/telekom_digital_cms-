@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "companies_in_fokuses",
+  "info": {
+    "singularName": "companies-in-fokus",
+    "pluralName": "companies-in-fokuses",
+    "displayName": "Companies-in-fokus",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "highlight": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

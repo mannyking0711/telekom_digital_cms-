@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_cts",
+  "info": {
+    "singularName": "test-ct",
+    "pluralName": "test-cts",
+    "displayName": "testCT",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ml": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "testo": {
+      "displayName": "testCom",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cat.test-com"
+    },
+    "test": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "accordion1": [
+          "ml"
+        ],
+        "titleAccordion1": "Ml",
+        "accordion2": [
+          "title"
+        ],
+        "titleAccordion2": "Title"
+      },
+      "customField": "plugin::digitalx-custom-fields.accordions"
+    }
+  }
+}

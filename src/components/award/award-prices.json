@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_award_award_prices",
+  "info": {
+    "icon": "asterisk",
+    "description": "",
+    "displayName": "AwardPrices"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

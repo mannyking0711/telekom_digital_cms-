@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_events_event_presenters",
+  "info": {
+    "icon": "address-card",
+    "displayName": "EventPresenter"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    }
+  }
+}

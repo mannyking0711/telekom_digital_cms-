@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_agenda_sessions",
+  "info": {
+    "icon": "braille",
+    "displayName": "sessions"
+  },
+  "options": {},
+  "attributes": {
+    "from": {
+      "type": "time",
+      "required": true
+    },
+    "to": {
+      "type": "time",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "description_html": {
+      "type": "text"
+    },
+    "participants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speaker.speaker"
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false
+    },
+    "highlight_position": {
+      "type": "integer"
+    },
+    "private_customer": {
+      "type": "boolean",
+      "default": false
+    },
+    "megatrends": {
+      "type": "component",
+      "repeatable": false,
+      "component": "agenda.megatrends"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd /var/www/digitalx_cms
+
+# install strapi.io cli
+sudo npm install -g strapi
+
+# install pm2 runtime
+sudo npm install -g pm2@^4.5.6

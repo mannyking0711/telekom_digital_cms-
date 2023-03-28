@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "content",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "Content"
+  },
+  "options": {
+
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "dummy": {
+      "type": "string"
+    }
+  }
+}

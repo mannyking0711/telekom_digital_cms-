@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_media_library_lists",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "MediaLibraryList"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::media-library.media-library"
+    }
+  }
+}

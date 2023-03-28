@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_events_event_marketplaces",
+  "info": {
+    "icon": "broadcast-tower",
+    "description": "",
+    "displayName": "event_marketplaces"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "marketplaces": {
+      "type": "component",
+      "repeatable": true,
+      "component": "events.marketplace"
+    },
+    "text": {
+      "type": "text",
+      "required": false
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

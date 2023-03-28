@@ -1,0 +1,118 @@
+{
+  "kind": "collectionType",
+  "collectionName": "awards",
+  "info": {
+    "singularName": "award",
+    "pluralName": "awards",
+    "displayName": "Award",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 1900,
+      "max": 2100
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "award-content.award-categories",
+        "award-content.award-impressions",
+        "award-content.award-nominees",
+        "award-content.award-other",
+        "award-content.award-patron",
+        "award-content.award-prices",
+        "award-content.award-process",
+        "award-content.award-quotes",
+        "award-content.award-regionals",
+        "award-content.award-retrospect",
+        "award-content.award-text",
+        "award-content.award-winners",
+        "award-content.award-intro",
+        "award-content.award-register",
+        "award-content.award-register2",
+        "award-content.award2-cols-text-with-image"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "winners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "award.award-winners",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "nominees": {
+      "type": "component",
+      "repeatable": true,
+      "component": "award.award-nominees",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "meta_title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "meta_description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "award_header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "award.award-header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B"
+      ]
+    }
+  }
+}

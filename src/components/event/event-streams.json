@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_event_event_streams",
+  "info": {
+    "icon": "photo-video",
+    "description": "",
+    "displayName": "EventStreams"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "uuid": {
+      "type": "string",
+      "required": true
+    },
+    "uuid_accessibility": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    }
+  }
+}

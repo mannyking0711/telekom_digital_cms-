@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_media_library_video",
+  "info": {
+    "icon": "users",
+    "description": "",
+    "displayName": "EventVideo"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video.video"
+    }
+  }
+}

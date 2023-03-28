@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_events_event_maps",
+  "info": {
+    "icon": "map-marked-alt",
+    "description": "",
+    "displayName": "event_map"
+  },
+  "options": {},
+  "attributes": {
+    "introtext": {
+      "type": "richtext"
+    },
+    "box1_title": {
+      "type": "string"
+    },
+    "box1_content": {
+      "type": "text"
+    },
+    "box2_title": {
+      "type": "string"
+    },
+    "box2_content": {
+      "type": "text"
+    },
+    "box3_title": {
+      "type": "string"
+    },
+    "box3_content": {
+      "type": "text"
+    },
+    "box4_title": {
+      "type": "string"
+    },
+    "box4_content": {
+      "type": "text"
+    },
+    "image_desktop": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image_mobile": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

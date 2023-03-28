@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "recommendations",
+  "info": {
+    "singularName": "recommendation",
+    "pluralName": "recommendations",
+    "displayName": "Recommendation"
+  },
+  "options": {
+
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "dummy": {
+      "type": "string"
+    }
+  }
+}

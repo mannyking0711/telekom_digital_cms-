@@ -1,0 +1,146 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "archive"
+      ],
+      "default": "draft",
+      "required": true,
+      "private": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "tags": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "published": {
+      "type": "date",
+      "required": false
+    },
+    "slug_de": {
+      "type": "string",
+      "unique": false,
+      "required": false
+    },
+    "slug_en": {
+      "type": "string",
+      "unique": false,
+      "required": false
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "img_list": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_detail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false
+    },
+    "meta_title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "meta_description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "structured_data": {
+      "type": "json"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "appearances": {
+      "type": "component",
+      "repeatable": true,
+      "component": "video.video-appearances",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "duration": {
+      "type": "string"
+    },
+    "videos_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::videos-group.videos-group",
+      "inversedBy": "videos"
+    },
+    "premium": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_mt_mt_anchor_lists",
+  "info": {
+    "icon": "splotch",
+    "displayName": "MegatrendsAnchorList"
+  },
+  "options": {},
+  "attributes": {
+    "megatrends": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::megatrend.megatrend"
+    }
+  }
+}

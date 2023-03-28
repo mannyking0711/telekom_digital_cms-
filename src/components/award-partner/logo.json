@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_award_partner_logos",
+  "info": {
+    "icon": "th-large",
+    "displayName": "logo"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

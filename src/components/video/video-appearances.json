@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_video_video_appearances",
+  "info": {
+    "icon": "child",
+    "displayName": "VideoAppearances"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

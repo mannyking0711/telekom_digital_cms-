@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmarks",
+  "info": {
+    "singularName": "bookmark",
+    "pluralName": "bookmarks",
+    "displayName": "Bookmark",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "item_id": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "item_type": {
+      "type": "enumeration",
+      "enum": [
+        "article",
+        "podcast",
+        "video"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "user_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-profile.user-profile",
+      "inversedBy": "bookmarks"
+    }
+  }
+}

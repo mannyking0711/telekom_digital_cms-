@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_content_card_items",
+  "info": {
+    "icon": "window-maximize",
+    "description": "Inhaltselement Titel, Text und Bild",
+    "displayName": "Card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

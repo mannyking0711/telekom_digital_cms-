@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_agenda_days",
+  "info": {
+    "icon": "calendar-day",
+    "description": "",
+    "displayName": "days"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "subjects": {
+      "type": "component",
+      "repeatable": true,
+      "component": "agenda.subjects"
+    }
+  }
+}

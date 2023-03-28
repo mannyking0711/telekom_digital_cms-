@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_speaker_speaker_megatrends",
+  "info": {
+    "icon": "air-freshener",
+    "description": "",
+    "displayName": "speaker_megatrends"
+  },
+  "options": {},
+  "attributes": {
+    "megatrends": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::megatrend.megatrend"
+    }
+  }
+}

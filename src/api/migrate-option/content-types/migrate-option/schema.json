@@ -1,0 +1,109 @@
+{
+  "kind": "singleType",
+  "collectionName": "migrate_options",
+  "info": {
+    "singularName": "migrate-option",
+    "pluralName": "migrate-options",
+    "displayName": "Migrate Options",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "article": {
+      "type": "json"
+    },
+    "articles_group": {
+      "type": "json"
+    },
+    "author": {
+      "type": "json"
+    },
+    "award": {
+      "type": "json"
+    },
+    "award_nominees": {
+      "type": "json"
+    },
+    "award_category": {
+      "type": "json"
+    },
+    "award_region": {
+      "type": "json"
+    },
+    "bookmark": {
+      "type": "json"
+    },
+    "user_profile": {
+      "type": "json"
+    },
+    "digi_index_archive": {
+      "type": "json"
+    },
+    "digi_index_sector": {
+      "type": "json"
+    },
+    "event": {
+      "type": "json"
+    },
+    "coverage": {
+      "type": "json"
+    },
+    "event_agenda": {
+      "type": "json"
+    },
+    "newsletter": {
+      "type": "json"
+    },
+    "speaker": {
+      "type": "json"
+    },
+    "megatrends": {
+      "type": "json"
+    },
+    "quarter": {
+      "type": "json"
+    },
+    "map_locations": {
+      "type": "json"
+    },
+    "partner": {
+      "type": "json"
+    },
+    "faq": {
+      "type": "json"
+    },
+    "faq_group": {
+      "type": "json"
+    },
+    "impressions": {
+      "type": "json"
+    },
+    "media_library": {
+      "type": "json"
+    },
+    "video": {
+      "type": "json"
+    },
+    "podcast": {
+      "type": "json"
+    },
+    "podcast_group": {
+      "type": "json"
+    },
+    "stage": {
+      "type": "json"
+    },
+    "tag": {
+      "type": "json"
+    },
+    "topic_of_the_week": {
+      "type": "json"
+    },
+    "videos_groups": {
+      "type": "json"
+    }
+  }
+}

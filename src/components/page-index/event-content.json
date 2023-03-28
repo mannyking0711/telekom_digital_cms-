@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_page_index_event_content",
+  "info": {
+    "icon": "arrow-circle-down",
+    "description": "",
+    "displayName": "event-content"
+  },
+  "options": {},
+  "attributes": {
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text1": {
+      "type": "richtext"
+    },
+    "gallery_title": {
+      "type": "text"
+    },
+    "gallery_subtitle": {
+      "type": "string"
+    },
+    "gallery_image_left": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "gallery_image_right": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "gallery_button": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "richtext"
+    }
+  }
+}

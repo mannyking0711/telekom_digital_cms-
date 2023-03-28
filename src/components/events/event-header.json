@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_events_event_header",
+  "info": {
+    "icon": "tv",
+    "description": "",
+    "displayName": "event-hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "required": false
+    },
+    "tickets_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "presenter_active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

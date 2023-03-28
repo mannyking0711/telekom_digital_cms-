@@ -1,0 +1,109 @@
+{
+  "collectionName": "components_events_event_gk_pk_teaser",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "event-gk-pk-teaser"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "title1": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle1": {
+      "type": "string",
+      "required": false
+    },
+    "text1": {
+      "type": "text",
+      "required": false
+    },
+    "content1": {
+      "type": "richtext"
+    },
+    "image1": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "button1_1": {
+      "type": "string",
+      "required": false
+    },
+    "url1_1": {
+      "type": "string",
+      "required": false
+    },
+    "button1_2": {
+      "type": "string",
+      "required": false
+    },
+    "url1_2": {
+      "type": "string",
+      "required": false
+    },
+    "button1_3": {
+      "type": "string",
+      "required": false
+    },
+    "url1_3": {
+      "type": "string",
+      "required": false
+    },
+    "title2": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle2": {
+      "type": "string",
+      "required": false
+    },
+    "text2": {
+      "type": "text",
+      "required": false
+    },
+    "content2": {
+      "type": "richtext"
+    },
+    "image2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "button2_1": {
+      "type": "string",
+      "required": false
+    },
+    "url2_1": {
+      "type": "string",
+      "required": false
+    },
+    "button2_2": {
+      "type": "string",
+      "required": false
+    },
+    "url2_2": {
+      "type": "string",
+      "required": false
+    },
+    "button2_3": {
+      "type": "string",
+      "required": false
+    },
+    "url2_3": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

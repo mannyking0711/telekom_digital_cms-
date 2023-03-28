@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_partner_page_advantages",
+  "info": {
+    "icon": "certificate",
+    "description": "",
+    "displayName": "advantages"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "bullets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partner-page.bullets"
+    }
+  }
+}

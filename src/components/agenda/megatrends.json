@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_agenda_megatrends",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "megatrends"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::megatrend.megatrend"
+    }
+  }
+}

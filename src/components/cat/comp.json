@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_cat_comps",
+  "info": {
+    "displayName": "comp",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "media_libraries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::media-library.media-library"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_agenda_subjects",
+  "info": {
+    "icon": "bars",
+    "description": "",
+    "displayName": "subjects"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "icon": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "presenters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speaker.speaker"
+    },
+    "sessions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "agenda.sessions"
+    }
+  }
+}

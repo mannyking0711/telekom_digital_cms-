@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_video_video_lists",
+  "info": {
+    "icon": "file-video",
+    "displayName": "video-list"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video.video"
+    }
+  }
+}

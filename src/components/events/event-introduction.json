@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_events_event_introduction",
+  "info": {
+    "icon": "broadcast-tower",
+    "displayName": "event_introduction"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "text"
+    },
+    "text": {
+      "type": "text"
+    },
+    "btn_label": {
+      "type": "string"
+    },
+    "image1": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image3": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

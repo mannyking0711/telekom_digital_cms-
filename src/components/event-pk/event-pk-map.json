@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_event_pk_event_pk_map",
+  "info": {
+    "icon": "address-card",
+    "displayName": "event-pk-map"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_award_content_award_register2s",
+  "info": {
+    "icon": "edit",
+    "displayName": "AwardRegister2"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "subheadline": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": false
+    },
+    "logo": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "button_text": {
+      "type": "string",
+      "required": true
+    },
+    "button_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

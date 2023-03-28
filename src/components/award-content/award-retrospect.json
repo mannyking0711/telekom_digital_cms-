@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_award-content_award_retrospect",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardRetrospect"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "subheadline": {
+      "type": "string"
+    },
+    "button": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "min": 1900,
+      "max": 2100
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

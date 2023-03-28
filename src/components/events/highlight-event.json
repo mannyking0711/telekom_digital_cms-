@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_events_highlight_event",
+  "info": {
+    "icon": "asterisk",
+    "description": "",
+    "displayName": "highlight-event"
+  },
+  "options": {},
+  "attributes": {
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    }
+  }
+}

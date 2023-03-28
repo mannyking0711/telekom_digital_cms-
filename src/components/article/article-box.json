@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_article_article_boxes",
+  "info": {
+    "icon": "archive",
+    "displayName": "ArticleBox"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

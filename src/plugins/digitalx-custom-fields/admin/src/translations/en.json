@@ -1,0 +1,8 @@
+{
+    "tabLabel": "Tabs",
+    "tabDescription": "Group Content Types into tabs",
+    "accLabel": "Accordions",
+    "accDescription": "Group Content Types into accordions",
+    "dividerLabel": "Divider",
+    "dividerDescription": "Simple Divider"
+  }

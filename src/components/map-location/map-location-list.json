@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_mp_l_mp_l_lists",
+  "info": {
+    "icon": "ambulance",
+    "displayName": "MapLocationList"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::map-location.map-location"
+    }
+  }
+}

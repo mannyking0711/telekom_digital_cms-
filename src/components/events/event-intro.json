@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_events_event_intro",
+  "info": {
+    "icon": "address-card",
+    "displayName": "event-intro"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}

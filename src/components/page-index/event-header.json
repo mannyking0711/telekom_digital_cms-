@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_page_index_event_header",
+  "info": {
+    "icon": "arrow-alt-circle-up",
+    "description": "",
+    "displayName": "event-header"
+  },
+  "options": {},
+  "attributes": {
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "hero_title": {
+      "type": "text"
+    },
+    "hero_image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "hero_button": {
+      "type": "string"
+    },
+    "hero_tags": {
+      "type": "string"
+    },
+    "tickets_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "presenter_active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

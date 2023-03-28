@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_privacy_policy_cookies",
+  "info": {
+    "icon": "cookie-bite",
+    "displayName": "Cookie"
+  },
+  "options": {},
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "purpose": {
+      "type": "string",
+      "required": true
+    },
+    "storage_period": {
+      "type": "string",
+      "required": true
+    },
+    "involved_as": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

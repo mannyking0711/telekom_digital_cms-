@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_privacy_policy_cookie_lists",
+  "info": {
+    "icon": "th-list",
+    "description": "",
+    "displayName": "CookieList"
+  },
+  "options": {},
+  "attributes": {
+    "cookies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "privacy-policy.cookie"
+    }
+  }
+}

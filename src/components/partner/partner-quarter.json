@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_partner_partner_quarters",
+  "info": {
+    "icon": "align-right",
+    "description": "",
+    "displayName": "partner_quarter"
+  },
+  "options": {},
+  "attributes": {
+    "quarter": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quarter.quarter"
+    }
+  }
+}

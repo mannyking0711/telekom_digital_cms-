@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_award-content_award_process",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardProcess"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "step1headline": {
+      "type": "string"
+    },
+    "step1text": {
+      "type": "text"
+    },
+    "step2headline": {
+      "type": "string"
+    },
+    "step2text": {
+      "type": "text"
+    },
+    "step3headline": {
+      "type": "string"
+    },
+    "step3text": {
+      "type": "text"
+    },
+    "step4headline": {
+      "type": "string"
+    },
+    "step4text": {
+      "type": "text"
+    },
+    "buttonNationalRegistration": {
+      "type": "string"
+    },
+    "buttonRegionalRegistration": {
+      "type": "string"
+    },
+    "buttonOtherRegistration": {
+      "type": "string"
+    },
+    "buttonNationalRegistration_url": {
+      "type": "string"
+    },
+    "buttonRegionalRegistration_url": {
+      "type": "string"
+    },
+    "buttonOtherRegistration_url": {
+      "type": "string"
+    }
+  }
+}

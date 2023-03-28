@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_events_event_app",
+  "info": {
+    "icon": "broadcast-tower",
+    "description": "",
+    "displayName": "event_app"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "subheadline": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "playstore_link": {
+      "type": "string"
+    },
+    "appstore_link": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    }
+  }
+}

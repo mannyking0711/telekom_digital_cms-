@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_content_teaser_pk",
+  "info": {
+    "icon": "address-card",
+    "description": "Teaser: Event GK | PK",
+    "displayName": "teaser-pk"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "headline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

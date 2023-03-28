@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_content_tiles-stages",
+  "info": {
+    "icon": "address-card",
+    "description": "Kacheln: Stages",
+    "displayName": "tiles-stages"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "headline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

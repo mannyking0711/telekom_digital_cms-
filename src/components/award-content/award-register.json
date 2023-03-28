@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_award_content_award_registers",
+  "info": {
+    "icon": "edit",
+    "description": "",
+    "displayName": "AwardRegister"
+  },
+  "options": {},
+  "attributes": {
+    "headlineRegisterNational": {
+      "type": "string"
+    },
+    "headlineRegisterRegional": {
+      "type": "string"
+    },
+    "buttonRegisterNational": {
+      "type": "string"
+    },
+    "buttonRegisterRegional": {
+      "type": "string"
+    },
+    "buttonRegisterNationalUrl": {
+      "type": "string"
+    },
+    "buttonRegisterRegionalUrl": {
+      "type": "string"
+    },
+    "textRegisterNational": {
+      "type": "richtext"
+    },
+    "textRegisterRegional": {
+      "type": "richtext"
+    }
+  }
+}

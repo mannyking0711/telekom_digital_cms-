@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_test_nested_repeated_components",
+  "info": {
+    "displayName": "nestedRepeatedComponent",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    }
+  }
+}

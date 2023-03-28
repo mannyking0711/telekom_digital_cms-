@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "map_locations",
+  "info": {
+    "singularName": "map-location",
+    "pluralName": "map-locations",
+    "displayName": "Map-location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "address": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quarter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner-quarter",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "private_customer": {
+      "type": "boolean",
+      "default": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Standard",
+        "Highlight",
+        "Akkreditierung",
+        "Testzentrum",
+        "Buehne"
+      ],
+      "required": true
+    }
+  }
+}

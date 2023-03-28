@@ -1,0 +1,176 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "archive"
+      ],
+      "default": "draft",
+      "required": true,
+      "private": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "img_list": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_detail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img_detail_header": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "published": {
+      "type": "date",
+      "required": false
+    },
+    "slug_de": {
+      "type": "string",
+      "unique": false,
+      "required": false
+    },
+    "slug_en": {
+      "type": "string",
+      "unique": false,
+      "required": false
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "article.article-text",
+        "article.article-image",
+        "article.article-i-frame",
+        "article.article-video",
+        "article.article-text-image",
+        "article.article-i-frame-twitter"
+      ],
+      "required": true,
+      "min": 1,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "meta_description": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "img_social": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "structured_data": {
+      "type": "json"
+    },
+    "meta_title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "meta_topline": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "introtext": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articles_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::articles-group.articles-group",
+      "inversedBy": "articles"
+    },
+    "premium": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "collectionName": "components_events_event_teaser_tickets_items",
+  "info": {
+    "icon": "address-card",
+    "displayName": "EventTeaserTicketsItem"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "blue",
+        "darkblue",
+        "magenta",
+        "yellow"
+      ],
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    },
+    "image_desktop": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "url_desktop": {
+      "type": "string",
+      "required": false
+    },
+    "image_desktop2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "url_desktop2": {
+      "type": "string",
+      "required": false
+    },
+    "image_mobile": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "url_mobile": {
+      "type": "string",
+      "required": false
+    },
+    "image_mobile2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "url_mobile2": {
+      "type": "string",
+      "required": false
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

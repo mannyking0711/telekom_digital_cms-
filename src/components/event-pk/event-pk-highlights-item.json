@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_event_pk_event_ph_highlights_item",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "event_pk_highlights_item"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

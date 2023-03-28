@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_award-content_award_winners",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardWinners"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "min": 1900,
+      "max": 2100
+    }
+  }
+}

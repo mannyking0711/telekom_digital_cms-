@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_award-content_award_impressions",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardImpressions"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "max": 2100,
+      "min": 1900
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "gallery_slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.slider"
+    },
+    "gallery_double": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.double-images"
+    },
+    "gallery_triple": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.triple-images"
+    }
+  }
+}

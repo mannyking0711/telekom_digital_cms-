@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_article_article_title_text_images",
+  "info": {
+    "icon": "align-center",
+    "displayName": "ArticleTitleTextImage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "alt_text": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "image_alignment": {
+      "type": "enumeration",
+      "enum": [
+        "Left",
+        "Right"
+      ],
+      "required": true,
+      "default": "Right"
+    }
+  }
+}

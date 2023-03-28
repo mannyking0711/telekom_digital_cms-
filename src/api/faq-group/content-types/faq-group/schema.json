@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_groups",
+  "info": {
+    "singularName": "faq-group",
+    "pluralName": "faq-groups",
+    "displayName": "Faq-group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq",
+      "mappedBy": "faq_group"
+    },
+    "participate": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_events_marketplaces",
+  "info": {
+    "icon": "store",
+    "displayName": "marketplace"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "yellow",
+        "green",
+        "pink",
+        "blue"
+      ],
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

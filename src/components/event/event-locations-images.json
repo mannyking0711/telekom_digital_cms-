@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_event_event_locations_images",
+  "info": {
+    "icon": "angle-right",
+    "description": "",
+    "displayName": "EventLocationsImages"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

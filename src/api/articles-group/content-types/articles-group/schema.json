@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles_groups",
+  "info": {
+    "singularName": "articles-group",
+    "pluralName": "articles-groups",
+    "displayName": "Articles-group",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "slug_de": {
+      "type": "string"
+    },
+    "slug_en": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "archive"
+      ],
+      "private": true,
+      "required": true,
+      "default": "draft"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "articles_group"
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "published": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_agenda_stage",
+  "info": {
+    "icon": "search-location",
+    "description": "",
+    "displayName": "Stage"
+  },
+  "options": {},
+  "attributes": {
+    "stage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::stage.stage"
+    }
+  }
+}

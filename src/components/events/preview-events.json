@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_events_preview_events",
+  "info": {
+    "icon": "asterisk",
+    "description": "",
+    "displayName": "preview-events"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "is_review": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "review_url": {
+      "type": "string"
+    },
+    "preview_headline": {
+      "type": "string"
+    },
+    "preview_position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ],
+      "default": "left"
+    },
+    "preview_images": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": true,
+      "required": false
+    }
+  }
+}

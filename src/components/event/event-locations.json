@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_event_event_locations",
+  "info": {
+    "icon": "search-location",
+    "description": "",
+    "displayName": "EventLocations"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "event_locations_images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event.event-locations-images"
+    }
+  }
+}

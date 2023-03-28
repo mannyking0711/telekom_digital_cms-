@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_event_participate_event_participate_streams",
+  "info": {
+    "icon": "address-card",
+    "displayName": "EventStreams"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "headline": {
+      "type": "string"
+    },
+    "headline_tag": {
+      "type": "string"
+    },
+    "subheadline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "streams_active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

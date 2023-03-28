@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_event_participate_event_participate_join",
+  "info": {
+    "icon": "address-card",
+    "displayName": "EventJoin"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "headline": {
+      "type": "string"
+    },
+    "headline_tag": {
+      "type": "string"
+    },
+    "subheadline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

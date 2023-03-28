@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_article_article_videos",
+  "info": {
+    "icon": "film",
+    "description": "",
+    "displayName": "ArticleVideo"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "allowedTypes": [
+        "videos"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "poster": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "alt_text": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}

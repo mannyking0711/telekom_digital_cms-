@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_award_content_award2_cols_text_with_images",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "Award2ColsTextWithImage"
+  },
+  "options": {},
+  "attributes": {
+    "image_col1": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "quote_col1": {
+      "type": "string"
+    },
+    "subheadline_col1": {
+      "type": "string"
+    },
+    "headline_col1": {
+      "type": "string",
+      "required": true
+    },
+    "text_col1": {
+      "type": "richtext",
+      "required": true
+    },
+    "image_col2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "quote_col2": {
+      "type": "string"
+    },
+    "subheadline_col2": {
+      "type": "string"
+    },
+    "headline_col2": {
+      "type": "string",
+      "required": true
+    },
+    "text_col2": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_speaker_links",
+  "info": {
+    "icon": "external-link-alt",
+    "description": "",
+    "displayName": "links"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "regex": "^https?://"
+    }
+  }
+}

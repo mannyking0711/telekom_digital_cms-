@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_article_article_i_frames",
+  "info": {
+    "icon": "expand",
+    "description": "",
+    "displayName": "ArticleIFrame"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "universal",
+        "facebook_video",
+        "youtube_video"
+      ]
+    }
+  }
+}

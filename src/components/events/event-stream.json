@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_events_event_streams",
+  "info": {
+    "icon": "video",
+    "description": "",
+    "displayName": "event_stream"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

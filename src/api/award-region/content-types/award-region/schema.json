@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "award_regions",
+  "info": {
+    "singularName": "award-region",
+    "pluralName": "award-regions",
+    "displayName": "Award-region",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

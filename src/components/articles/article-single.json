@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_articles_article_singles",
+  "info": {
+    "icon": "list-alt",
+    "description": "",
+    "displayName": "ArticleSingle"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    }
+  }
+}

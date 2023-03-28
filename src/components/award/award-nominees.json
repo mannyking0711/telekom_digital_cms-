@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_award_award_nominees",
+  "info": {
+    "icon": "align-justify",
+    "description": "",
+    "displayName": "AwardNominees"
+  },
+  "options": {},
+  "attributes": {
+    "entry": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::award-nominee.award-nominee"
+    }
+  }
+}

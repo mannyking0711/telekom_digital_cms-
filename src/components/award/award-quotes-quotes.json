@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_award_content_award_quotes_quotes",
+  "info": {
+    "icon": "address-book",
+    "description": "",
+    "displayName": "AwardQuotes"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    }
+  }
+}

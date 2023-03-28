@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_events_event_advertising",
+  "info": {
+    "icon": "tv",
+    "description": "",
+    "displayName": "event-advertising"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

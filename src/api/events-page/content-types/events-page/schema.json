@@ -1,0 +1,148 @@
+{
+  "kind": "singleType",
+  "collectionName": "events_pages",
+  "info": {
+    "singularName": "events-page",
+    "pluralName": "events-pages",
+    "displayName": "Events-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "intro_headline": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "intro_highlight_event": {
+      "type": "component",
+      "component": "events.highlight-event",
+      "repeatable": false,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "intro_events": {
+      "type": "component",
+      "component": "events.events-list",
+      "repeatable": false,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "info_headline": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "info_fact1_number": {
+      "type": "string"
+    },
+    "info_fact1_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "info_fact2_number": {
+      "type": "string"
+    },
+    "info_fact2_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "info_fact3_number": {
+      "type": "string"
+    },
+    "info_fact3_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "info_fact4_number": {
+      "type": "string"
+    },
+    "info_fact4_text": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "info_text": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "preview_events": {
+      "type": "component",
+      "component": "events.preview-events",
+      "repeatable": true,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footer_events": {
+      "type": "component",
+      "component": "events.events-list",
+      "repeatable": false,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footer_headline": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footer_text": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

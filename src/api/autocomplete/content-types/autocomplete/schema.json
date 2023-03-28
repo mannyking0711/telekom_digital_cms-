@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autocompletes",
+  "info": {
+    "singularName": "autocomplete",
+    "pluralName": "autocompletes",
+    "displayName": "Autocomplete",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "update_st_dt": {
+      "type": "datetime"
+    },
+    "update_en_dt": {
+      "type": "datetime"
+    }
+  }
+}

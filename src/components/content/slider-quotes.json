@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_content_slider_quotes",
+  "info": {
+    "icon": "address-card",
+    "displayName": "SliderQuotes"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "title_tag": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "quotes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.slider-quotes-quote"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "megatrends",
+  "info": {
+    "singularName": "megatrend",
+    "pluralName": "megatrends",
+    "displayName": "Megatrend",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quote": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "quote_author": {
+      "type": "string"
+    },
+    "subtopics": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "background_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background_color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "dark_red",
+        "yellow",
+        "light_green",
+        "blue",
+        "green",
+        "purple_magenta",
+        "orange",
+        "magenta",
+        "dark_blue"
+      ],
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

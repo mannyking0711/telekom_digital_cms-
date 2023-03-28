@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_gallery_triple_images",
+  "info": {
+    "icon": "file-image",
+    "displayName": "triple_images"
+  },
+  "options": {},
+  "attributes": {
+    "image1": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image3": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}

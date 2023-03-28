@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_content_note",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "Note"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "info"
+      ],
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

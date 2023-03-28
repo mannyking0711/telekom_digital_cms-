@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_events_events_lists",
+  "info": {
+    "icon": "list-ol",
+    "displayName": "events-list"
+  },
+  "options": {},
+  "attributes": {
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  }
+}

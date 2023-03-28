@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "indexes",
+  "info": {
+    "singularName": "index",
+    "pluralName": "indices",
+    "displayName": "Index",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "article_hero": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "event_header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-index.event-header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "event_intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-index.event-intro",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "event_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-index.event-content",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "event_locations": {
+      "type": "component",
+      "repeatable": false,
+      "component": "event.event-locations",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content_teaser_cards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.teaser-cards",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content_slider_quotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.slider-quotes",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

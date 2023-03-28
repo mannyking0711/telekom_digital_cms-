@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_event_pk_event_pk_highlights",
+  "info": {
+    "icon": "address-card",
+    "displayName": "event-pk-highlights"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "event_pk_highlights_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event-pk.event-pk-highlights-item"
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "magenta",
+        "blue"
+      ],
+      "required": true
+    }
+  }
+}

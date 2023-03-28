@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_event_pk_event_pk_teaser",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "event-pk-teaser"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

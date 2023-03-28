@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_event_pk_event_pk_banner2",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "event-pk-banner2"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "headline_tag": {
+      "type": "string",
+      "required": false
+    },
+    "headline": {
+      "type": "string",
+      "required": false
+    },
+    "text": {
+      "type": "richtext",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

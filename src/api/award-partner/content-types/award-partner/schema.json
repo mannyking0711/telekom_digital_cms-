@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "award_partners",
+  "info": {
+    "singularName": "award-partner",
+    "pluralName": "award-partners",
+    "displayName": "Award-partner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "award-partner.logo"
+    }
+  }
+}

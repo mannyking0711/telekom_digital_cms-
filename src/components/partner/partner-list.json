@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_partner_partner_lists",
+  "info": {
+    "icon": "list",
+    "description": "",
+    "displayName": "partner-list"
+  },
+  "options": {},
+  "attributes": {
+    "partners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner.partner"
+    }
+  }
+}

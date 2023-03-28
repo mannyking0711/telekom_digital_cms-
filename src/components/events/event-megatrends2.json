@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_events_event_megatrends2",
+  "info": {
+    "icon": "address-card",
+    "displayName": "event-megatrends2"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "title_tag": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}

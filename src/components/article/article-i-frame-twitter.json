@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_article_article_i_frame_twitters",
+  "info": {
+    "icon": "kiwi-bird",
+    "description": "",
+    "displayName": "ArticleIFrameTwitter"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "twitter_snippet"
+      ]
+    },
+    "html": {
+      "type": "text",
+      "required": true,
+      "default": "HTML erstellen auf https://publish.twitter.com/ Bitte den script tag am Ende löschen (<script async...></script>)"
+    }
+  }
+}

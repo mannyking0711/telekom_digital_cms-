@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "test_sts",
+  "info": {
+    "singularName": "test-st",
+    "pluralName": "test-sts",
+    "displayName": "testST",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "testRel": {
+      "displayName": "testCMP",
+      "type": "component",
+      "repeatable": false,
+      "component": "test-cat.test-cmp",
+      "required": true
+    },
+    "ml_field": {
+      "displayName": "comp",
+      "type": "component",
+      "repeatable": false,
+      "component": "cat.comp"
+    },
+    "mainVideo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "media-library.video"
+    },
+    "textComp": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "award-content.award-text"
+    },
+    "textCompReq": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "award-content.award-text"
+    }
+  }
+}

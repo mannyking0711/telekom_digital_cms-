@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_award-content_award_patrons",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardPatron"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "headline": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "boolean",
+      "default": false
+    },
+    "button": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

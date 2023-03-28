@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_partner_page_bullets",
+  "info": {
+    "icon": "list-ul",
+    "displayName": "bullets"
+  },
+  "options": {},
+  "attributes": {
+    "bullet": {
+      "type": "string"
+    }
+  }
+}

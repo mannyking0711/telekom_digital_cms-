@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_gallery_double_images",
+  "info": {
+    "icon": "images",
+    "description": "",
+    "displayName": "double_images"
+  },
+  "options": {},
+  "attributes": {
+    "image1": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "image2": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "large": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second"
+      ],
+      "default": "first",
+      "required": true
+    }
+  }
+}

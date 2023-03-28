@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_award-content_award_prices",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardPrices"
+  },
+  "options": {},
+  "attributes": {
+    "prices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "award.award-prices"
+    },
+    "headline": {
+      "type": "string"
+    }
+  }
+}

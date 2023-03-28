@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_partner_partner_foci",
+  "info": {
+    "icon": "star",
+    "displayName": "Partner-Focus"
+  },
+  "options": {},
+  "attributes": {
+    "partners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner.partner"
+    }
+  }
+}

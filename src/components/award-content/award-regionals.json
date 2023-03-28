@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_award-content_award_regionals",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardRegionals"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "max": 2100,
+      "min": 1900
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

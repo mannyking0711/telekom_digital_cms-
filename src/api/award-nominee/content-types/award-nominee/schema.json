@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "award_nominees",
+  "info": {
+    "singularName": "award-nominee",
+    "pluralName": "award-nominees",
+    "displayName": "Award-nominee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "location": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::award-category.award-category"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::award-region.award-region"
+    }
+  }
+}

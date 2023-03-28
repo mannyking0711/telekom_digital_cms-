@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_events_event_teaser_tickets",
+  "info": {
+    "icon": "address-card",
+    "displayName": "EventTeaserTickets"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "headline_tag": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "events.event-teaser-tickets-item"
+    }
+  }
+}

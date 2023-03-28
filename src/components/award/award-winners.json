@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_award_award_winners",
+  "info": {
+    "icon": "atom",
+    "description": "",
+    "displayName": "AwardWinners"
+  },
+  "options": {},
+  "attributes": {
+    "entry": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::award-nominee.award-nominee"
+    },
+    "category_override": {
+      "type": "string"
+    }
+  }
+}

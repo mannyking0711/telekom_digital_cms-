@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_test_cat_test_cmps",
+  "info": {
+    "displayName": "testCMP",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "test_cts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::test-ct.test-ct"
+    }
+  }
+}

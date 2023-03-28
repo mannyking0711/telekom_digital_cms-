@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_award-content_award_categories",
+  "info": {
+    "icon": "address-card",
+    "description": "",
+    "displayName": "AwardCategories"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    }
+  }
+}

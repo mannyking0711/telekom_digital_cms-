@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_cat_test_coms",
+  "info": {
+    "displayName": "testCom",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

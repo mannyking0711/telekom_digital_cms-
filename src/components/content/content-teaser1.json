@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_content_teaser1",
+  "info": {
+    "icon": "address-card",
+    "description": "Teaser: 2-spaltig Bild | Inhalt",
+    "displayName": "teaser1"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "button": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": false
+    }
+  }
+}
